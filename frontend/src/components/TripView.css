@@ -1,0 +1,436 @@
+.trip-view {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 헤더 */
+.trip-header {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.back-button {
+  background: var(--background-alt);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  transition: all 0.2s;
+  margin-bottom: 1rem;
+}
+
+.back-button:hover {
+  background: var(--border-color);
+}
+
+.trip-title {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.trip-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+
+.separator {
+  color: var(--border-color);
+}
+
+/* 탭 */
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  flex: 1;
+  padding: 0.875rem;
+  background: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tab:hover {
+  color: var(--text-primary);
+}
+
+.tab.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* 컨텐츠 */
+.trip-content {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+  min-height: 400px;
+}
+
+/* 타임라인 뷰 */
+.timeline-view {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.summary-box {
+  background: linear-gradient(135deg, #FFF4F0, #FFE8DF);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-box h3 {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.summary-item {
+  text-align: center;
+}
+
+.summary-item .label {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.summary-item .value {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* 섹션 */
+.section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+/* 교통편 카드 */
+.transport-card {
+  background: var(--background-alt);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.transport-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.transport-type {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.transport-price {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.transport-route {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.arrow {
+  color: var(--text-secondary);
+}
+
+.transport-time {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+/* 타임라인 */
+.timeline {
+  position: relative;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-item:last-child .timeline-connector {
+  display: none;
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 1.5rem;
+  z-index: 2;
+}
+
+.timeline-connector {
+  position: absolute;
+  left: 5px;
+  top: 2rem;
+  width: 2px;
+  height: calc(100% + 1rem);
+  background: var(--border-color);
+  z-index: 1;
+}
+
+.timeline-content {
+  flex: 1;
+}
+
+.timeline-time {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-card {
+  background: var(--background-alt);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-card h4 {
+  font-size: 1.125rem;
+  color: var(--text-primary);
+}
+
+.rating {
+  font-size: 0.875rem;
+  color: var(--warning-color);
+}
+
+.timeline-location {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-description {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-duration,
+.timeline-price {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+/* 지도 뷰 */
+.map-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+}
+
+.map-placeholder {
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.map-icon {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.map-placeholder p {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.map-note {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.map-info {
+  text-align: left;
+  background: var(--background-alt);
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.map-marker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.map-marker:last-child {
+  border-bottom: none;
+}
+
+.marker-icon {
+  font-size: 1.25rem;
+}
+
+.marker-coords {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-left: auto;
+}
+
+/* 비용 뷰 */
+.cost-view {
+  padding: 1rem;
+}
+
+.cost-summary {
+  background: linear-gradient(135deg, #F0F7FF, #E3F2FF);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cost-summary h3 {
+  font-size: 1.125rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.cost-total {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.cost-breakdown h4 {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.cost-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--background-alt);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.cost-label {
+  color: var(--text-primary);
+}
+
+.cost-value {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* 액션 버튼 */
+.trip-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.action-button {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-button.secondary {
+  background: white;
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+}
+
+.action-button.secondary:hover {
+  border-color: var(--text-secondary);
+}
+
+.action-button.primary {
+  background: var(--success-color);
+  color: white;
+}
+
+.action-button.primary:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(6, 167, 125, 0.3);
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .trip-actions {
+    flex-direction: column;
+  }
+}
